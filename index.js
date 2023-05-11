@@ -144,10 +144,8 @@ async function run() {
 run().catch(console.log);
 
 app.get("/", async (req, res) => {
-  res.send("doctor is liseingg");
+  res.send("mPair server welcome");
 });
 app.listen(port, () => {
-  console.log("running", port);
+  console.log(`listening on port ${port}`);
 });
-// amirul;
-// LIOQstlZiNQbUBIn
