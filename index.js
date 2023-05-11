@@ -12,7 +12,7 @@ const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
 app.use(express.json());
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_Pass}@cluster0.neres47.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.neres47.mongodb.net/?retryWrites=true&w=majority`;
 
 // console.log(uri);
 const client = new MongoClient(uri, {
