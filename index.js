@@ -1,14 +1,14 @@
 const express = require("express");
-const cors = require("cors");
-const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-const jwt = require("jsonwebtoken");
-
-require("dotenv").config();
-
-const port = process.env.PORT || 5000;
-
 const app = express();
-app.use(cors());
+require("dotenv").config();
+const port = process.env.PORT || 5000;
+const cors = require("cors");
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+});
+const jwt = require("jsonwebtoken");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+
 app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_Pass}@cluster0.neres47.mongodb.net/?retryWrites=true&w=majority`;
