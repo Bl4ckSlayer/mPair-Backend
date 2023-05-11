@@ -6,6 +6,7 @@ const cors = require("cors");
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
 });
+app.use(cors());
 const jwt = require("jsonwebtoken");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 
